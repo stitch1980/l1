@@ -65,7 +65,8 @@ unsigned long    traite_fonction(const Info *info, const Fonction *f, Analyse *a
             if ((instr->_type & INSTR_INVALIDE) == INSTR_INVALIDE)
             {
                 nbs++;
-                descr_instr = instr->_opcode + "\t\t(";
+                instr->to_asm(info, descr_instr);
+                descr_instr += "\t\t(";
 
                 /* Ajout des octets des l'instruction a la description */
                 for (unsigned long i=0; i<instr->_size; i++)
