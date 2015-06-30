@@ -6,6 +6,7 @@ all:
 	make all -C ./plugin_parse_format_ELF
 	make all -C ./plugin_parse_format_MBR
 	make all -C ./plugin_parse_format_PE
+	make all -C ./plugin_parse_init_interrupt_linux
 	make all -C ./plugin_clean_spaghetti
 	make all -C ./plugin_clean_junk_code
 	make all -C ./plugin_clean_invalid
@@ -17,7 +18,6 @@ all:
 	make all -C ./plugin_analyse_search_vulnerable_printf
 	
 	make all -C ./plugin_init_interrupt_dos
-	make all -C ./plugin_init_interrupt_intel_linux
 	make all -C ./plugin_type_simple
 	make all -C ./plugin_deassembleur
 	make all -C ./plugin_intel
@@ -32,6 +32,7 @@ clean:
 	make clean -C ./plugin_parse_format_ELF
 	make clean -C ./plugin_parse_format_MBR
 	make clean -C ./plugin_parse_format_PE
+	make clean -C ./plugin_parse_init_interrupt_linux
 	make clean -C ./plugin_clean_spaghetti
 	make clean -C ./plugin_clean_junk_code
 	make clean -C ./plugin_clean_invalid
@@ -43,7 +44,6 @@ clean:
 	make clean -C ./plugin_analyse_search_vulnerable_printf
 	
 	make clean -C ./plugin_init_interrupt_dos
-	make clean -C ./plugin_init_interrupt_intel_linux
 	make clean -C ./plugin_type_simple
 	make clean -C ./plugin_deassembleur
 	make clean -C ./plugin_intel
@@ -58,6 +58,7 @@ fclean:
 	make fclean -C ./plugin_parse_format_ELF
 	make fclean -C ./plugin_parse_format_MBR
 	make fclean -C ./plugin_parse_format_PE
+	make fclean -C ./plugin_parse_init_interrupt_linux
 	make fclean -C ./plugin_clean_spaghetti
 	make fclean -C ./plugin_clean_junk_code
 	make fclean -C ./plugin_clean_invalid
@@ -69,7 +70,6 @@ fclean:
 	make fclean -C ./plugin_analyse_search_vulnerable_printf
 	
 	make fclean -C ./plugin_init_interrupt_dos
-	make fclean -C ./plugin_init_interrupt_intel_linux
 	make fclean -C ./plugin_type_simple
 	make fclean -C ./plugin_deassembleur
 	make fclean -C ./plugin_intel
