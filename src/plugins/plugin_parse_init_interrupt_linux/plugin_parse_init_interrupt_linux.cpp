@@ -16,10 +16,10 @@
 #include    "Info.hpp"
 
 
-#define PLUGIN_DESCR_TYPE        PLUGIN_TYPE__PARSING  
-#define PLUGIN_DESCR_PRIORITE    "3000"      
+#define PLUGIN_DESCR_TYPE        PLUGIN_TYPE__PARSING
+#define PLUGIN_DESCR_PRIORITE    "3000"
 #define PLUGIN_DESCR_NAME        "plugin_parse_init_interrupt_linux"
-#define PLUGIN_DESCR_VERSION     "0"  
+#define PLUGIN_DESCR_VERSION     "0"
 #define PLUGIN_NAME              PLUGIN_DESCR_TYPE "." PLUGIN_DESCR_PRIORITE "." PLUGIN_DESCR_NAME "." PLUGIN_DESCR_VERSION
 
 extern "C"
@@ -52,7 +52,7 @@ int    init_interrupt_linux_i386(Info *info)
     info->interrupt.add_syscall(7, "waitpid", "int", "int", "int*", "int");
     info->interrupt.add_syscall(8, "creat", "int", "char*", "int");
     info->interrupt.add_syscall(9, "link", "int", "char*", "char*");
-    
+
     info->interrupt.add_syscall(10, "unlink", "int", "char*");
     info->interrupt.add_syscall(11, "execve", "int", "char*", "char**", "char**");
     info->interrupt.add_syscall(12, "chdir", "int", "char*");
@@ -63,7 +63,7 @@ int    init_interrupt_linux_i386(Info *info)
     info->interrupt.add_syscall(17, "break", "");
     info->interrupt.add_syscall(18, "stat", "int", "char*", "stat*");
     info->interrupt.add_syscall(19, "lseek", "long", "int", "long", "int");
-    
+
     info->interrupt.add_syscall(20, "getpid", "int");
     info->interrupt.add_syscall(21, "mount", "int", "char*", "char*char*", "long", "void*");
     info->interrupt.add_syscall(22, "umount", "int", "char*");
